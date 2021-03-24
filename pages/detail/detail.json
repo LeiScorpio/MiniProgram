@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "w-swiper": "/components/w-swiper/w-swiper"
+  }
+}

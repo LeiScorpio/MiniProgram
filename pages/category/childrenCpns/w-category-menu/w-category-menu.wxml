@@ -1,0 +1,7 @@
+<!--pages/category/childrenCpns/w-category-menu/w-category-menu.wxml-->
+<scroll-view class="menu" scroll-y>
+  <block>
+    <view class="menu-item {{currentIndex == index ? 'active' : ''}}" data-index="{{index}}" wx:for="{{categoryInfo}}"
+      wx:key="index" bind:tap="menuItemClick">{{item.title}}</view>
+  </block>
+</scroll-view>

@@ -1,0 +1,16 @@
+<!--pages/category/childrenCpns/w-category-content/w-category-content.wxml-->
+<scroll-view class="content" scroll-y>
+  <!-- 子分类区域 -->
+  <view class="subcategory">
+    <block wx:for="{{categoryDeatil}}" wx:key="index">
+      <view class="subcategory-item">
+        <image src="{{item.image}}" class="subcategory-item-image" mode="widthFix" />
+        <view class="subcategory-item-text">{{item.title}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 推荐商品区域 -->
+  <view>
+    <w-goods goods="{{categoryRecommend}}"></w-goods>
+  </view>
+</scroll-view>

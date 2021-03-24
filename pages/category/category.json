@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-category-menu": "./childrenCpns/w-category-menu/w-category-menu",
+    "w-category-content": "./childrenCpns/w-category-content/w-category-content"
+  },
+  "navigationBarTitleText": "分类"
 }

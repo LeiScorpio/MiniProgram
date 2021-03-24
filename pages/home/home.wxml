@@ -1,2 +1,20 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 展示轮播图 -->
+<w-swiper list="{{banner}}"></w-swiper>
+
+<!-- 展示推荐数据 -->
+<w-recommend recommend-list="{{recommend}}" bind:imageload="handleImageLoad"></w-recommend>
+
+<!-- 展示本周流行 -->
+<w-popular></w-popular>
+
+<!-- 展示tab-control -->
+<w-tab-control id="tab-control" titles="{{titles}}" bind:tabclick="handleTabClick" class="{{isTabControlFixed? 'fixed':''}}"></w-tab-control>
+<w-tab-control titles="{{titles}}" wx:if="{{isTabControlFixed}}"></w-tab-control>
+
+<!-- 展示商品数据 -->
+<w-goods goods="{{goods[currentType].list}}"></w-goods>
+
+<!-- 回到顶部 -->
+<!-- 注意 hidden 属性在自定义组件上是不可用的 -->
+<w-back-top wx:if="{{isShowBackTop}}"/>

@@ -1,0 +1,3 @@
+<!--pages/detail/detail.wxml-->
+<!-- 顶部轮播图 -->
+<w-swiper list="{{topImages}}" class="d-swiper"></w-swiper>

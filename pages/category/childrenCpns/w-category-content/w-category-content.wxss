@@ -1,0 +1,22 @@
+/* pages/category/childrenCpns/w-category-content/w-category-content.wxss */
+.content {
+  height: 100vh;
+}
+.subcategory {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  padding: 20rpx;
+}
+.subcategory-item {
+  width: 33.33%;
+  text-align: center;
+}
+.subcategory-item-image {
+  width: 80%;
+}
+.subcategory-item-text {
+  margin: 30rpx 0;
+  font-size: 28rpx;
+  color: #868686;
+} 
