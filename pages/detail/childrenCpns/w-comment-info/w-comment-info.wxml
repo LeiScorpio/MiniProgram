@@ -6,7 +6,7 @@
     <view>更多 >></view>
   </view>
   <view class='user'>
-    <image src="{{commentInfo.user.avatar}}" class="user-image"/>
+    <image src="{{commentInfo.user.avatar}}" class="user-image" />
     <text class="user-text">{{commentInfo.user.uname}}</text>
   </view>
   <view class='comment'>
@@ -17,10 +17,8 @@
     <view class='style'>{{commentInfo.style}}</view>
   </view>
   <view class='picture'>
-    <block wx:for="{{commentInfo.images}}" 
-           wx:key="index">
-      <image src="{{item}}" mode="widthFix" class="comment-image"/>
+    <block wx:for="{{commentInfo.images}}" wx:key="index">
+      <image src="{{item}}" mode="widthFix" class="comment-image" />
     </block>
   </view>
 </view>
-

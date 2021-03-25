@@ -91,39 +91,7 @@ Page({
       // this.getGoodsDataNet(this.data.currentType)
     })
   },
-
-  // 生命周期函数--监听页面初次渲染完成
-  onReady: function () {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  // 页面相关事件处理函数--监听用户下拉动作
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
+  // 页面上拉触底事件的处理函数
   onReachBottom: function () {
     // 上拉加载更多功能
     this.getGoodsDataNet(this.data.currentType)
@@ -145,13 +113,16 @@ Page({
         isTabControlFixed: flag2
       })
     }
-
   },
-
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    // 自定义分享的页面
+    return {
+      title: '购物街',
+      path: '/pages/home/home',
+      imageUrl: 'http://s11.mogucdn.com/mlcdn/c45406/180827_4b5ajib5de3gbd9a9i142dkd2541g_640x960.jpg'
+    }
   }
 })

@@ -1,19 +1,21 @@
 <!--pages/detail/detail.wxml-->
 <scroll-view scroll-y class="detail-scroll">
   <!-- 顶部轮播图 -->
-<w-swiper list="{{topImages}}" class="d-swiper"></w-swiper>
-<!-- 展示商品基本信息 -->
-<w-base-info baseInfo="{{baseInfo}}"></w-base-info>
-<!-- 展示店铺基本信息 -->
-<w-shop-info shopInfo="{{shopInfo}}"></w-shop-info>
-<!-- 展示商品详细信息 -->
-<w-detail-info detailInfo="{{detailInfo}}"></w-detail-info>
-<!-- 展示商品详细参数 -->
-<w-params-info paramInfo="{{paramInfo}}"></w-params-info>
-<!-- 展示评论信息 -->
-<w-comment-info commentInfo="{{commentInfo}}"></w-comment-info>
-<!-- 展示推荐信息 -->
-<w-recommend-info recommends="{{recommends}}"></w-recommend-info>
+  <w-swiper list="{{topImages}}" class="d-swiper"></w-swiper>
+  <!-- 展示商品基本信息 -->
+  <w-base-info baseInfo="{{baseInfo}}"></w-base-info>
+  <!-- 展示店铺基本信息 -->
+  <w-shop-info shopInfo="{{shopInfo}}"></w-shop-info>
+  <!-- 展示商品详细信息 -->
+  <w-detail-info detailInfo="{{detailInfo}}"></w-detail-info>
+  <!-- 展示商品详细参数 -->
+  <w-params-info paramInfo="{{paramInfo}}"></w-params-info>
+  <!-- 展示评论信息 -->
+  <w-comment-info commentInfo="{{commentInfo}}"></w-comment-info>
+  <!-- 展示推荐信息 -->
+  <w-recommend-info recommends="{{recommends}}"></w-recommend-info>
 </scroll-view>
 <!-- 底部控制栏 -->
 <w-bottom-bar bind:addCartClick="addToCart"></w-bottom-bar>
+<!-- 回到顶部 -->
+<w-back-top wx:if="{{isShowBackTop}}"></w-back-top>

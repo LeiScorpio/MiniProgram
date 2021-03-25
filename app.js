@@ -5,7 +5,6 @@ App({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -27,7 +26,13 @@ App({
       obj.checked = true
       this.globalData.cartList.push(obj)
     }
-
+    // 2.购物车回调，刷新购物车页面
+    if (this.addCartCallback) {
+      this.addCartCallback()
+    }
+  },
+  deleteFromCart(index) {
+    this.globalData.cartList.splice(index,1)
     // 2.购物车回调
     if (this.addCartCallback) {
       this.addCartCallback()

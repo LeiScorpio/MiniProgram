@@ -6,7 +6,10 @@ import {
   ShopInfo,
   ParamInfo
 } from '../../service/detail.js'
+
 const app = getApp()
+const distanceTop = 1000
+
 Page({
   data: {
     iid: '',
@@ -16,28 +19,20 @@ Page({
     detailInfo: {},
     paramInfo: {},
     commentInfo: {},
-    recommends: []
+    recommends: [],
+    isShowBackTop: false
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     const iid = options.iid
     this.setData({
       iid: iid
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
     // 调用请求详情页数据的方法
     this.getDetailNet(this.data.iid)
     // 调用请求详情页推荐数据的方法
     this.getRecommendsNet()
-
   },
   // ------------------------------------事件处理函数-------------------------
   // 监听点击加入购物车
@@ -52,7 +47,6 @@ Page({
 
     // 2.加入到购物车列表
     app.addToCart(obj)
-
     // 3.加入成功提示
     wx.showToast({
       title: '加入购物车成功',
@@ -104,45 +98,14 @@ Page({
       res.data.data.list
     })
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPageScroll(options) {
+    const scrollTop = options.scrollTop
+    // 官方提示不要在滚动的回调函数潘帆的调用this.setData
+    const flag = scrollTop >= distanceTop
+    if (flag != this.data.isShowBackTop) {
+      this.setData({
+        isShowBackTop: scrollTop >= distanceTop
+      })
+    }
   }
 })

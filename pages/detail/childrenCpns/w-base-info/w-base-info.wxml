@@ -15,9 +15,9 @@
     <block wx:for="{{baseInfo.services}}" wx:key="index">
       <block wx:if="{{index != 0}}">
         <view class="service-item">
-        <image src="{{item.icon}}" class="service-item-icon"></image>
-        <text class="service-item-text">{{item.name}}</text>
-      </view>
+          <image src="{{item.icon}}" class="service-item-icon"></image>
+          <text class="service-item-text">{{item.name}}</text>
+        </view>
       </block>
     </block>
   </view>

@@ -1,5 +1,9 @@
 // pages/category/category.js
-import { getCategory, getSubCategory, getCategoryDetail  } from "../../service/category.js";
+import {
+  getCategory,
+  getSubCategory,
+  getCategoryDetail
+} from "../../service/category.js";
 Page({
   //  页面的初始数据
   data: {
@@ -13,7 +17,6 @@ Page({
     currentIndex: 0,
     currentMaitKey: 3627,
     currentMiniWallkey: 10062603
-
   },
   // 生命周期函数--监听页面加载
   onLoad: function (options) {
@@ -23,7 +26,6 @@ Page({
     this.getSubCategoryNet(this.data.currentMaitKey)
     // 调用请求右侧推荐商品数据的方法
     this.getCategoryDetailNet(this.data.currentMiniWallkey)
-
   },
   // ------------------------事件处理函数-------------------------
   // 监听目录点击事件
@@ -71,54 +73,5 @@ Page({
         categoryRecommend: categoryRecommend
       })
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

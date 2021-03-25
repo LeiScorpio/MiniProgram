@@ -2,15 +2,15 @@
 <view class='bottom-bar'>
   <view class='bar-left bar-item'>
     <view class='left-item service'>
-      <image src="/assets/images/detail/service.png" class="bottom-bar-image"/>
+      <image src="/assets/images/detail/service.png" class="bottom-bar-image" />
       <view>客服</view>
     </view>
     <view class='left-item'>
-      <image src="/assets/images/detail/shop.png" class="bottom-bar-image"/>
+      <image src="/assets/images/detail/shop.png" class="bottom-bar-image" />
       <view>店铺</view>
     </view>
     <view class='left-item'>
-      <image src="/assets/images/detail/collect.png" class="bottom-bar-image"/>
+      <image src="/assets/images/detail/collect.png" class="bottom-bar-image" />
       <view>收藏</view>
     </view>
   </view>

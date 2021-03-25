@@ -2,6 +2,6 @@
 <view class='detail-recommend'>
   <view class='header'>商品推荐</view>
   <view class='content'>
-    <w-goods goods="{{recommends}}"/>
+    <w-goods goods="{{recommends}}" />
   </view>
 </view>

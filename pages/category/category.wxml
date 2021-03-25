@@ -3,5 +3,6 @@
   <!-- 左侧目录 -->
   <w-category-menu class="category-menu" bind:menuClick="menuClick" categoryInfo="{{categoryInfo}}"></w-category-menu>
   <!-- 右侧详情 -->
-  <w-category-content class="category-content" categoryDeatil="{{categoryDeatil}}" categoryRecommend="{{categoryRecommend}}"></w-category-content>
+  <w-category-content class="category-content" categoryDeatil="{{categoryDeatil}}"
+    categoryRecommend="{{categoryRecommend}}"></w-category-content>
 </view>
