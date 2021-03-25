@@ -1,0 +1,73 @@
+/* pages/detail/childrenCpns/w-shop-info/w-shop-info.wxss */
+.detail-shop-info {
+  padding: 16rpx 16rpx 50rpx;
+  border-bottom: 12rpx solid #f2f2f2;
+  color: #878787;
+}
+.shop-info {
+  margin-top: 30rpx;
+}
+.shop-logo {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 46rpx;
+  border: 1px solid rgba(200,200,200,.6);
+  vertical-align: middle;
+}
+.shop-title {
+  margin-left: 18rpx;
+}
+.shop-sell {
+  display: flex;
+  margin: 40rpx 0;
+}
+.sell-count {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  margin: 20rpx 0;
+  border-right: 1px solid rgba(200,200,200,.6);
+}
+.count-item {
+  flex: 1;
+}
+.count-item-count {
+  font-size: 40rpx;
+}
+.count-item-text {
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+.sell-grade {
+  flex: 1;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+.grade-row {
+  display: flex;
+}
+.grade-name {
+  text-align: center;
+  width: 200rpx;
+  margin-top: 8rpx;
+}
+.grade-score {
+  flex: 1;
+  margin-top: 8rpx;
+}
+.grade-lev {
+  flex: 1;
+  margin-top: 8rpx;
+}
+.better {
+  color: #ff5777;
+}
+.less {
+  color: #5ea732;
+}
+.shop-entrance {
+  text-align: center;
+}
+.shop-entrance .entrance-btn {
+  padding: 8rpx 100rpx;
+}

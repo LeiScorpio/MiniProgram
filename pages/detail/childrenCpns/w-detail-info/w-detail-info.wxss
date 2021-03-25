@@ -1,0 +1,43 @@
+/* pages/detail/childrenCpns/w-detail-info/w-detail-info.wxss */
+.detail-info {
+  color: #878787;
+  border-bottom: 12rpx solid #f2f2f2;
+}
+.detail-info-title {
+  position: relative;
+  padding: 10rpx 30rpx;
+  font-size: 32rpx;
+}
+.header-line, .footer-line {
+  width: 180rpx;
+  height: 1px;
+  margin: 30rpx 0;
+  background-color: #666;
+  position: relative;
+}
+.footer-line {
+  float: right;
+}
+.header-line::before, .footer-line::after {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #333;
+  position: absolute;
+}
+.header-line::before {
+  left: 0;
+  bottom: 0;
+}
+.footer-line::after {
+  right: 0;
+  bottom: -8rpx;
+}
+.detail-info-content .title {
+  margin: 50rpx 0 30rpx 30rpx;
+  font-size: 32rpx;
+}
+
+.detail-info-content .detail-info-image {
+  width: 100%;
+}

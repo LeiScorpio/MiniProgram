@@ -13,14 +13,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/category/category",
-          "pathName": "pages/category/category",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/detail/detail",
           "pathName": "pages/detail/detail",
+          "query": "",
           "scene": null
         }
       ]

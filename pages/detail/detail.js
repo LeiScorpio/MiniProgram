@@ -6,6 +6,7 @@ import {
   ShopInfo,
   ParamInfo
 } from '../../service/detail.js'
+const app = getApp()
 Page({
   data: {
     iid: '',
@@ -15,7 +16,7 @@ Page({
     detailInfo: {},
     paramInfo: {},
     commentInfo: {},
-    recommends: {}
+    recommends: []
   },
 
   /**
@@ -34,9 +35,29 @@ Page({
   onReady: function () {
     // 调用请求详情页数据的方法
     this.getDetailNet(this.data.iid)
+    // 调用请求详情页推荐数据的方法
+    this.getRecommendsNet()
 
   },
   // ------------------------------------事件处理函数-------------------------
+  // 监听点击加入购物车
+  addToCart() {
+    // 1.获取当前商品数据对象
+    const obj = {}
+    obj.iid = this.data.iid;
+    obj.imageURL = this.data.topImages[0];
+    obj.title = this.data.baseInfo.title;
+    obj.desc = this.data.baseInfo.desc;
+    obj.price = this.data.baseInfo.realPrice;
+
+    // 2.加入到购物车列表
+    app.addToCart(obj)
+
+    // 3.加入成功提示
+    wx.showToast({
+      title: '加入购物车成功',
+    })
+  },
   // ------------------------------------网络请求函数-------------------------
   // 1.封装一个请求详情页数据的方法
   getDetailNet(iid) {
@@ -73,6 +94,15 @@ Page({
       })
     })
 
+  },
+  // 2.封装一个调用请求详情页推荐数据的方法
+  getRecommendsNet() {
+    getRecommends().then(res => {
+      this.setData({
+        recommends: res.data.data.list
+      })
+      res.data.data.list
+    })
   },
   /**
    * 生命周期函数--监听页面显示

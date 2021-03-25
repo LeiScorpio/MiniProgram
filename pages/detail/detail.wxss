@@ -1,4 +1,7 @@
 /* pages/detail/detail.wxss */
-.d-swiper swiper {
+.detail-scroll {
+  height: calc(100% - 120rpx);
+}
+.d-swiper swiper{
   height: 800rpx;
 }

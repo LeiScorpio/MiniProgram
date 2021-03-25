@@ -1,0 +1,9 @@
+/* pages/detail/childrenCpns/w-recommend-info/w-recommend-info.wxss */
+.detail-recommend {
+  padding: 10rpx 0;
+}
+
+.header {
+  font-size: 40rpx;
+  margin: 10rpx;
+}

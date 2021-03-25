@@ -13,4 +13,8 @@
   width: 0;
   height: 0;
   color: transparent;
+}
+page {
+  height: 100%;
+  color: #777;
 } 
